@@ -16,12 +16,7 @@ android {
     }
 
     buildTypes {
-        debug {
-            buildConfigField "String", "THEME", "\"safepath\""
-        }
         release {
-            buildConfigField "String", "THEME", "\"safepath\""
-
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }

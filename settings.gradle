@@ -16,3 +16,5 @@ rootProject.name = "Compose Design System"
 include ':design-system-library'
 include ':product-app'
 include ':theme'
+include ':client-app'
+include ':product-core'

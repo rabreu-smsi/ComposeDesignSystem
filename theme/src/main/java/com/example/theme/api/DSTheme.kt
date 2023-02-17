@@ -9,6 +9,7 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalView
 import com.example.theme.BuildConfig
+import com.example.theme.impl.client.dsColorSchemeClient
 import com.example.theme.impl.safepath.dsColorSchemeSafePath
 import com.example.theme.impl.safepath.dsTypographySafePath
 
@@ -28,32 +29,33 @@ object DSTheme {
 
 @Composable
 fun DSAppTheme(
+    appTheme: AppTheme = AppTheme.SafePath,
     content: @Composable () -> Unit,
 ) {
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {
             val activity = view.context as Activity
-            activity.window.statusBarColor = getColorScheme().onBackgroundLight.toArgb()
+            activity.window.statusBarColor = getColorScheme(appTheme).onBackgroundLight.toArgb()
         }
     }
 
-    LocalColorScheme = staticCompositionLocalOf { getColorScheme() }
-    LocalTypography = staticCompositionLocalOf { getTypography() }
+    LocalColorScheme = staticCompositionLocalOf { getColorScheme(appTheme) }
+    LocalTypography = staticCompositionLocalOf { getTypography(appTheme) }
 
     CompositionLocalProvider(
-        LocalColorScheme!! provides getColorScheme(),
-        LocalTypography!! provides getTypography(),
+        LocalColorScheme!! provides getColorScheme(appTheme),
+        LocalTypography!! provides getTypography(appTheme),
         content = content
     )
 }
 
-private fun getColorScheme() = when (BuildConfig.THEME) {
-    "safepath" -> dsColorSchemeSafePath
-    else -> throw IllegalArgumentException("unknown theme: $")
+private fun getColorScheme(appTheme: AppTheme) = when (appTheme) {
+    AppTheme.SafePath -> dsColorSchemeSafePath
+    AppTheme.Client -> dsColorSchemeClient
 }
 
-private fun getTypography() = when (BuildConfig.THEME) {
-    "safepath" -> dsTypographySafePath
-    else -> throw IllegalArgumentException("unknown theme: ${BuildConfig.THEME}")
+private fun getTypography(appTheme: AppTheme) = when (appTheme) {
+    AppTheme.SafePath -> dsTypographySafePath
+    AppTheme.Client -> dsTypographySafePath
 }
