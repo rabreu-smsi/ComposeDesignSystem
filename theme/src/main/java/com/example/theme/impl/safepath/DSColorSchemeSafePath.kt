@@ -1,9 +1,9 @@
-package com.example.theme.safepath
+package com.example.theme.impl.safepath
 
 import androidx.compose.ui.graphics.Color
 import com.example.theme.api.DSColorScheme
 
-val dsColorScheme = DSColorScheme(
+internal val dsColorSchemeSafePath = DSColorScheme(
     main = Color(0xFF5B667C),
     onMain = Color(0xFFFFFFFF),
     onMainSecondary = Color(0xFFFFFFBF),

@@ -7,8 +7,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.theme.api.DSAppTheme
 import com.example.theme.api.DSTheme
-import com.example.theme.safepath.DSTheme
 
 @Composable
 fun DSScreen(
@@ -19,16 +19,14 @@ fun DSScreen(
             .fillMaxSize()
             .background(DSTheme.colorScheme.background)
     ) {
-        Column {
-            content()
-        }
+        content()
     }
 }
 
 @Preview
 @Composable
 private fun DSScreenPreview() {
-    DSTheme {
+    DSAppTheme {
         DSScreen {}
     }
 }

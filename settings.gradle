@@ -15,5 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "Compose Design System"
 include ':design-system-library'
 include ':product-app'
-include ':theme-api'
-include ':theme-safepath'
+include ':theme'

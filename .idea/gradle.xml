@@ -13,8 +13,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/design-system-library" />
             <option value="$PROJECT_DIR$/product-app" />
-            <option value="$PROJECT_DIR$/theme-api" />
-            <option value="$PROJECT_DIR$/theme-safepath" />
+            <option value="$PROJECT_DIR$/theme" />
           </set>
         </option>
       </GradleProjectSettings>

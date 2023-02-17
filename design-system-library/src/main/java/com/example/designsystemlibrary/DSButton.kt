@@ -2,6 +2,7 @@ package com.example.designsystemlibrary
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -10,8 +11,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.theme.api.DSAppTheme
 import com.example.theme.api.DSTheme
-import com.example.theme.safepath.DSTheme
 
 @Composable
 fun DSButton(
@@ -27,7 +28,8 @@ fun DSButton(
     ) {
         Button(
             modifier = Modifier
-                .fillMaxWidth(),
+                .fillMaxWidth()
+                .height(52.dp),
             onClick = onClick,
             colors = ButtonDefaults.buttonColors(
                 containerColor = DSTheme.colorScheme.accent,
@@ -36,7 +38,7 @@ fun DSButton(
         ) {
             Text(
                 text = text,
-                style = DSTheme.typography.Body1
+                style = DSTheme.typography.Button
             )
         }
     }
@@ -45,7 +47,7 @@ fun DSButton(
 @Preview(showBackground = true)
 @Composable
 private fun DSButtonPreview() {
-    DSTheme {
+    DSAppTheme {
         DSButton(
             text = "Button",
             onClick = {}

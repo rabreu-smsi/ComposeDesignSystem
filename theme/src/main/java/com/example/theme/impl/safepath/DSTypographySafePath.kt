@@ -1,4 +1,4 @@
-package com.example.theme.safepath
+package com.example.theme.impl.safepath
 
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
@@ -6,7 +6,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.example.theme.api.DSTypography
 
-val dsTypography = DSTypography(
+internal val dsTypographySafePath = DSTypography(
     H1 = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.W500,
