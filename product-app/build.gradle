@@ -46,6 +46,16 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.1"
     }
+
+    flavorDimensions "project"
+    productFlavors {
+        safepath {
+            applicationIdSuffix ".safepath"
+        }
+        client {
+            applicationIdSuffix ".client"
+        }
+    }
 }
 
 dependencies {
