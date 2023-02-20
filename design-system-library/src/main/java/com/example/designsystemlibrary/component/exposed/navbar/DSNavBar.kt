@@ -15,7 +15,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.designsystemlibrary.R
-import com.example.designsystemlibrary.component.internal.icon.Icon
 import com.example.designsystemlibrary.component.internal.icon.IconFillHeight
 import com.example.designsystemlibrary.theme.DSTheme
 import com.example.designsystemlibrary.theme.DesignSystemTheme
@@ -61,7 +60,7 @@ fun DSNavBar(
         Spacer(modifier = Modifier.weight(1f))
         Text(
             text = title,
-            style = DSTheme.typography.H4,
+            style = DSTheme.typography.h4,
             color = DSTheme.colorScheme.onBackground
         )
         Spacer(modifier = Modifier.weight(1f))

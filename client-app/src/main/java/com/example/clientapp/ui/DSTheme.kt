@@ -1,33 +1,37 @@
-package com.example.designsystemlibrary.theme
+package com.example.clientapp.ui
 
 import android.app.Activity
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.staticCompositionLocalOf
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalView
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
+import com.example.designsystemlibrary.theme.DSColorScheme
+import com.example.designsystemlibrary.theme.DSTypography
+import com.example.designsystemlibrary.theme.LocalColorScheme
+import com.example.designsystemlibrary.theme.LocalTypography
 
-var LocalColorScheme: ProvidableCompositionLocal<DSColorScheme>? = null
-var LocalTypography: ProvidableCompositionLocal<DSTypography>? = null
+private val colorScheme = DSColorScheme(
+    accent = Color(0xFF226FBB)
+)
 
-private val colorScheme = DSColorScheme()
-private val typography = DSTypography()
-
-object DSTheme {
-    val colorScheme: DSColorScheme
-        @Composable
-        get() = LocalColorScheme?.current
-            ?: throw IllegalArgumentException("color scheme not initialized")
-    val typography: DSTypography
-        @Composable
-        get() = LocalTypography?.current
-            ?: throw IllegalArgumentException("typography not initialized")
-}
+private val typography = DSTypography(
+    button = TextStyle(
+        fontFamily = FontFamily.SansSerif,
+        fontWeight = FontWeight.W800,
+        fontSize = 14.sp,
+        lineHeight = 20.sp
+    )
+)
 
 @Composable
-internal fun DesignSystemTheme(content: @Composable () -> Unit) {
+fun ClientTheme(content: @Composable () -> Unit) {
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {

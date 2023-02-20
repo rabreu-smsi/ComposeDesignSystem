@@ -8,104 +8,87 @@ import androidx.compose.ui.unit.sp
 
 @Immutable
 data class DSTypography(
-    val H1: TextStyle,
-    val H2: TextStyle,
-    val H3: TextStyle,
-    val H4: TextStyle,
-    val H5: TextStyle,
-    val H6: TextStyle,
-    val Body1: TextStyle,
-    val Body2: TextStyle,
-    val Caption: TextStyle,
-    val Button: TextStyle,
-    val ButtonSmall: TextStyle,
-    val LinkBody1: TextStyle,
-    val LinkBody2: TextStyle,
-    val LinkCaption: TextStyle
-)
-
-internal val dsTypography = DSTypography(
-    H1 = TextStyle(
+    val h1: TextStyle = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.W500,
         fontSize = 34.sp,
         lineHeight = 40.sp
     ),
-    H2 = TextStyle(
+    val h2: TextStyle = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.W500,
         fontSize = 24.sp,
         lineHeight = 32.sp
     ),
-    H3 = TextStyle(
+    val h3: TextStyle = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.W500,
         fontSize = 20.sp,
         lineHeight = 28.sp
     ),
-    H4 = TextStyle(
+    val h4: TextStyle = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.W500,
         fontSize = 16.sp,
         lineHeight = 24.sp
     ),
-    H5 = TextStyle(
+    val h5: TextStyle = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.W500,
         fontSize = 14.sp,
         lineHeight = 20.sp
     ),
-    H6 = TextStyle(
+    val h6: TextStyle = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.W500,
         fontSize = 12.sp,
         lineHeight = 16.sp,
         letterSpacing = 0.6f.sp
     ),
-    Body1 = TextStyle(
+    val body1: TextStyle = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.W400,
         fontSize = 16.sp,
         lineHeight = 24.sp
     ),
-    Body2 = TextStyle(
+    val body2: TextStyle = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.W400,
         fontSize = 14.sp,
         lineHeight = 20.sp
     ),
-    Caption = TextStyle(
+    val caption: TextStyle = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.W400,
         fontSize = 12.sp,
         lineHeight = 16.sp,
         letterSpacing = 0.4f.sp
     ),
-    Button = TextStyle(
+    val button: TextStyle = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.W500,
         fontSize = 16.sp,
         lineHeight = 20.sp
     ),
-    ButtonSmall = TextStyle(
+    val buttonSmall: TextStyle = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.W500,
         fontSize = 14.sp,
         lineHeight = 16.sp
     ),
-    LinkBody1 = TextStyle(
+    val linkBody1: TextStyle = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.W400,
         fontSize = 16.sp,
         lineHeight = 24.sp
     ),
-    LinkBody2 = TextStyle(
+    val linkBody2: TextStyle = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.W400,
         fontSize = 14.sp,
         lineHeight = 20.sp
     ),
-    LinkCaption = TextStyle(
+    val linkCaption: TextStyle = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.W400,
         fontSize = 12.sp,

@@ -38,7 +38,7 @@ fun DSButton(
         ) {
             Text(
                 text = text,
-                style = DSTheme.typography.Button
+                style = DSTheme.typography.button
             )
         }
     }

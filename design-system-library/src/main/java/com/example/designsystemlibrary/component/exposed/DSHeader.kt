@@ -29,7 +29,7 @@ fun DSHeader(
         Text(
             modifier = Modifier.fillMaxWidth(),
             text = title,
-            style = DSTheme.typography.H2,
+            style = DSTheme.typography.h2,
             textAlign = textAlign
         )
 
@@ -38,7 +38,7 @@ fun DSHeader(
             Text(
                 modifier = Modifier.fillMaxWidth(),
                 text = body,
-                style = DSTheme.typography.Body2,
+                style = DSTheme.typography.body2,
                 textAlign = textAlign
             )
         }

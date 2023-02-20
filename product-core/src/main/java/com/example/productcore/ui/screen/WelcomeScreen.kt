@@ -11,7 +11,7 @@ import com.example.designsystemlibrary.component.exposed.DSImage
 import com.example.designsystemlibrary.component.exposed.DSParagraph
 import com.example.designsystemlibrary.component.exposed.DSScreen
 import com.example.productcore.R
-import com.example.productcore.ui.theme.SafePathTheme
+import com.example.productcore.ui.SafePathTheme
 
 @Composable
 fun WelcomeScreen(

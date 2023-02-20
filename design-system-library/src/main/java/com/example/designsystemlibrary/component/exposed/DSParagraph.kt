@@ -41,7 +41,7 @@ fun DSParagraph(
         ) {
             Text(
                 text = text,
-                style = DSTheme.typography.Body1
+                style = DSTheme.typography.body1
             )
         }
     }

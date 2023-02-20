@@ -1,4 +1,4 @@
-package com.example.productcore.ui.theme
+package com.example.productcore.ui
 
 import android.app.Activity
 import androidx.compose.runtime.Composable
@@ -7,8 +7,13 @@ import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalView
+import com.example.designsystemlibrary.theme.DSColorScheme
+import com.example.designsystemlibrary.theme.DSTypography
 import com.example.designsystemlibrary.theme.LocalColorScheme
 import com.example.designsystemlibrary.theme.LocalTypography
+
+private val colorScheme = DSColorScheme()
+private val typography = DSTypography()
 
 @Composable
 internal fun SafePathTheme(content: @Composable () -> Unit) {
@@ -16,16 +21,16 @@ internal fun SafePathTheme(content: @Composable () -> Unit) {
     if (!view.isInEditMode) {
         SideEffect {
             val activity = view.context as Activity
-            activity.window.statusBarColor = safePathColorScheme.onBackgroundLight.toArgb()
+            activity.window.statusBarColor = colorScheme.onBackgroundLight.toArgb()
         }
     }
 
-    LocalColorScheme = staticCompositionLocalOf { safePathColorScheme }
-    LocalTypography = staticCompositionLocalOf { safePathTypography }
+    LocalColorScheme = staticCompositionLocalOf { colorScheme }
+    LocalTypography = staticCompositionLocalOf { typography }
 
     CompositionLocalProvider(
-        LocalColorScheme!! provides safePathColorScheme,
-        LocalTypography!! provides safePathTypography,
+        LocalColorScheme!! provides colorScheme,
+        LocalTypography!! provides typography,
         content = content
     )
 }

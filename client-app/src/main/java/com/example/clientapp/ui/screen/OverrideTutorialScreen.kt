@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.clientapp.ui.theme.ClientTheme
+import com.example.clientapp.ui.ClientTheme
 import com.example.designsystemlibrary.component.exposed.DSButton
 import com.example.designsystemlibrary.component.exposed.DSHeader
 import com.example.designsystemlibrary.component.exposed.DSImage

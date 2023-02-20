@@ -14,7 +14,7 @@ import com.example.designsystemlibrary.component.exposed.DSImage
 import com.example.designsystemlibrary.component.exposed.DSScreen
 import com.example.designsystemlibrary.component.exposed.navbar.DSNavBar
 import com.example.productcore.R
-import com.example.productcore.ui.theme.SafePathTheme
+import com.example.productcore.ui.SafePathTheme
 
 @Composable
 fun TutorialScreen(
