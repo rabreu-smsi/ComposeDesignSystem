@@ -1,14 +1,13 @@
-package com.example.designsystemlibrary
+package com.example.designsystemlibrary.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.theme.api.DSAppTheme
-import com.example.theme.api.DSTheme
+import com.example.designsystemlibrary.theme.DesignSystemTheme
+import com.example.designsystemlibrary.theme.DSTheme
 
 @Composable
 fun DSScreen(
@@ -26,7 +25,7 @@ fun DSScreen(
 @Preview
 @Composable
 private fun DSScreenPreview() {
-    DSAppTheme {
+    DesignSystemTheme {
         DSScreen {}
     }
 }

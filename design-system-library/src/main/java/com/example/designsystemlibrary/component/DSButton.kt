@@ -1,4 +1,4 @@
-package com.example.designsystemlibrary
+package com.example.designsystemlibrary.component
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -11,8 +11,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.theme.api.DSAppTheme
-import com.example.theme.api.DSTheme
+import com.example.designsystemlibrary.theme.DesignSystemTheme
+import com.example.designsystemlibrary.theme.DSTheme
 
 @Composable
 fun DSButton(
@@ -47,7 +47,7 @@ fun DSButton(
 @Preview(showBackground = true)
 @Composable
 private fun DSButtonPreview() {
-    DSAppTheme {
+    DesignSystemTheme {
         DSButton(
             text = "Button",
             onClick = {}

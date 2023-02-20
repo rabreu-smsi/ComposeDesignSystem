@@ -1,16 +1,16 @@
-package com.example.theme.impl.safepath
+package com.example.clientapp.ui.theme
 
 import androidx.compose.ui.graphics.Color
-import com.example.theme.api.DSColorScheme
+import com.example.designsystemlibrary.theme.DSColorScheme
 
-internal val dsColorSchemeSafePath = DSColorScheme(
+internal val clientColorScheme = DSColorScheme(
     main = Color(0xFF5B667C),
     onMain = Color(0xFFFFFFFF),
     onMainSecondary = Color(0xFFFFFFBF),
     onMainDisabled = Color(0xFFFFFF80),
     onMainLight = Color(0xFFFFFF26),
     onMainExtraLight = Color(0xFFFFFF14),
-    accent = Color(0xFF29AB87),
+    accent = Color(0xFF301D5B),
     onAccent = Color(0xFFFFFFFF),
     onAccentSecondary = Color(0xFFFFFFD9),
     onAccentDisabled = Color(0xFFFFFFA6),

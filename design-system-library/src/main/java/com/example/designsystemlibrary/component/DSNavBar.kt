@@ -1,4 +1,4 @@
-package com.example.designsystemlibrary
+package com.example.designsystemlibrary.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -10,8 +10,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.theme.api.DSAppTheme
-import com.example.theme.api.DSTheme
+import com.example.designsystemlibrary.R
+import com.example.designsystemlibrary.theme.DesignSystemTheme
 
 @Composable
 fun DSNavBar(
@@ -34,7 +34,7 @@ fun DSNavBar(
 @Preview(showBackground = true)
 @Composable
 private fun DSNavBarPreview() {
-    DSAppTheme {
+    DesignSystemTheme {
         DSNavBar(logoResId = R.drawable.ic_logo_toolbar)
     }
 }

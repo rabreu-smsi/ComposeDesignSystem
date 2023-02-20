@@ -7,14 +7,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.designsystemlibrary.DSButton
-import com.example.designsystemlibrary.DSHeader
-import com.example.designsystemlibrary.DSImage
-import com.example.designsystemlibrary.DSNavBar
-import com.example.designsystemlibrary.DSScreen
+import com.example.designsystemlibrary.component.DSButton
+import com.example.designsystemlibrary.component.DSHeader
+import com.example.designsystemlibrary.component.DSImage
+import com.example.designsystemlibrary.component.DSNavBar
+import com.example.designsystemlibrary.component.DSScreen
 import com.example.productcore.R
-import com.example.theme.api.AppTheme
-import com.example.theme.api.DSAppTheme
+import com.example.productcore.ui.theme.SafePathTheme
 
 @Composable
 fun TutorialScreen(
@@ -42,7 +41,7 @@ fun TutorialScreen(
 @Preview
 @Composable
 private fun TutorialScreenPreview() {
-    DSAppTheme {
+    SafePathTheme {
         TutorialScreen(
             onGetStartedButtonClick = {}
         )

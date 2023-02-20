@@ -1,12 +1,30 @@
-package com.example.theme.impl.client
+package com.example.designsystemlibrary.theme
 
+import androidx.compose.runtime.Immutable
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.example.theme.api.DSTypography
 
-internal val dsTypographyClient = DSTypography(
+@Immutable
+data class DSTypography(
+    val H1: TextStyle,
+    val H2: TextStyle,
+    val H3: TextStyle,
+    val H4: TextStyle,
+    val H5: TextStyle,
+    val H6: TextStyle,
+    val Body1: TextStyle,
+    val Body2: TextStyle,
+    val Caption: TextStyle,
+    val Button: TextStyle,
+    val ButtonSmall: TextStyle,
+    val LinkBody1: TextStyle,
+    val LinkBody2: TextStyle,
+    val LinkCaption: TextStyle
+)
+
+internal val dsTypography = DSTypography(
     H1 = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.W500,
@@ -65,8 +83,8 @@ internal val dsTypographyClient = DSTypography(
     ),
     Button = TextStyle(
         fontFamily = FontFamily.SansSerif,
-        fontWeight = FontWeight.W800,
-        fontSize = 14.sp,
+        fontWeight = FontWeight.W500,
+        fontSize = 16.sp,
         lineHeight = 20.sp
     ),
     ButtonSmall = TextStyle(

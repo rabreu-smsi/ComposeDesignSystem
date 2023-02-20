@@ -1,12 +1,12 @@
-package com.example.theme.impl.safepath
+package com.example.clientapp.ui.theme
 
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.example.theme.api.DSTypography
+import com.example.designsystemlibrary.theme.DSTypography
 
-internal val dsTypographySafePath = DSTypography(
+internal val clientTypography = DSTypography(
     H1 = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.W500,
@@ -65,8 +65,8 @@ internal val dsTypographySafePath = DSTypography(
     ),
     Button = TextStyle(
         fontFamily = FontFamily.SansSerif,
-        fontWeight = FontWeight.W500,
-        fontSize = 16.sp,
+        fontWeight = FontWeight.W800,
+        fontSize = 14.sp,
         lineHeight = 20.sp
     ),
     ButtonSmall = TextStyle(

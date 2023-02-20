@@ -1,4 +1,4 @@
-package com.example.designsystemlibrary
+package com.example.designsystemlibrary.component
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.theme.api.DSAppTheme
-import com.example.theme.api.DSTheme
+import com.example.designsystemlibrary.theme.DesignSystemTheme
+import com.example.designsystemlibrary.theme.DSTheme
 
 @Composable
 fun DSHeader(
@@ -45,7 +45,7 @@ fun DSHeader(
 @Preview(showBackground = true)
 @Composable
 private fun DSHeaderPreview() {
-    DSAppTheme {
+    DesignSystemTheme {
         DSHeader(
             title = "Header title",
             body = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\n" +
