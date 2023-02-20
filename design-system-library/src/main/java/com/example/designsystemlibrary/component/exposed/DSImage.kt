@@ -1,4 +1,4 @@
-package com.example.designsystemlibrary.component
+package com.example.designsystemlibrary.component.exposed
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxWidth

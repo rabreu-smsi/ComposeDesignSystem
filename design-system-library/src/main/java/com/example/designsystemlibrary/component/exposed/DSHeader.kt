@@ -1,4 +1,4 @@
-package com.example.designsystemlibrary.component
+package com.example.designsystemlibrary.component.exposed
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -18,33 +17,45 @@ import com.example.designsystemlibrary.theme.DSTheme
 @Composable
 fun DSHeader(
     title: String,
-    body: String
+    body: String? = null,
+    textAlign: TextAlign = TextAlign.Start
 ) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(
-                horizontal = 38.dp,
-                vertical = 16.dp
-            ),
-        horizontalAlignment = Alignment.CenterHorizontally
+            .padding(horizontal = 16.dp)
+            .padding(top = 16.dp, bottom = 8.dp)
     ) {
         Text(
+            modifier = Modifier.fillMaxWidth(),
             text = title,
-            style = DSTheme.typography.H3
+            style = DSTheme.typography.H2,
+            textAlign = textAlign
         )
-        Spacer(modifier = Modifier.height(10.dp))
-        Text(
-            text = body,
-            style = DSTheme.typography.Body1,
-            textAlign = TextAlign.Center
-        )
+
+        if (body != null) {
+            Spacer(modifier = Modifier.height(10.dp))
+            Text(
+                modifier = Modifier.fillMaxWidth(),
+                text = body,
+                style = DSTheme.typography.Body2,
+                textAlign = textAlign
+            )
+        }
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun DSHeaderPreview() {
+    DesignSystemTheme {
+        DSHeader(title = "Header title")
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun DSHeaderPreview_withBody() {
     DesignSystemTheme {
         DSHeader(
             title = "Header title",
