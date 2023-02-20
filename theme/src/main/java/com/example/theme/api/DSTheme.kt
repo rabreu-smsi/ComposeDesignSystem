@@ -29,7 +29,7 @@ object DSTheme {
 
 @Composable
 fun DSAppTheme(
-    appTheme: AppTheme = AppTheme.SafePath,
+    appTheme: AppTheme,
     content: @Composable () -> Unit,
 ) {
     val view = LocalView.current

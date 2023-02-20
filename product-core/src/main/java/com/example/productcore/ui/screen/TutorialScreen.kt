@@ -13,29 +13,28 @@ import com.example.designsystemlibrary.DSImage
 import com.example.designsystemlibrary.DSNavBar
 import com.example.designsystemlibrary.DSScreen
 import com.example.productcore.R
+import com.example.theme.api.AppTheme
 import com.example.theme.api.DSAppTheme
 
 @Composable
 fun TutorialScreen(
     onGetStartedButtonClick: () -> Unit
 ) {
-    DSAppTheme {
-        DSScreen {
-            Column {
-                DSNavBar(logoResId = R.drawable.ic_logo_toolbar)
-                Spacer(modifier = Modifier.height(53.dp))
-                DSImage(imageResId = R.drawable.img_slide01)
-                Spacer(modifier = Modifier.height(24.dp))
-                DSHeader(
-                    title = "Keep Your Family Safe",
-                    body = "Location Monitoring, Tracking, and Parental Controls made easy."
-                )
-                Spacer(modifier = Modifier.weight(1f))
-                DSButton(
-                    text = "Get started",
-                    onClick = onGetStartedButtonClick
-                )
-            }
+    DSScreen {
+        Column {
+            DSNavBar(logoResId = R.drawable.ic_logo_toolbar)
+            Spacer(modifier = Modifier.height(53.dp))
+            DSImage(imageResId = R.drawable.img_slide01)
+            Spacer(modifier = Modifier.height(24.dp))
+            DSHeader(
+                title = "Keep Your Family Safe",
+                body = "Location Monitoring, Tracking, and Parental Controls made easy."
+            )
+            Spacer(modifier = Modifier.weight(1f))
+            DSButton(
+                text = "Get started",
+                onClick = onGetStartedButtonClick
+            )
         }
     }
 }
@@ -43,7 +42,9 @@ fun TutorialScreen(
 @Preview
 @Composable
 private fun TutorialScreenPreview() {
-    TutorialScreen(
-        onGetStartedButtonClick = {}
-    )
+    DSAppTheme(AppTheme.SafePath) {
+        TutorialScreen(
+            onGetStartedButtonClick = {}
+        )
+    }
 }

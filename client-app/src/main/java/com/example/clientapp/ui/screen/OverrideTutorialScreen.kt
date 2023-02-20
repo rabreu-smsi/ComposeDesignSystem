@@ -21,27 +21,25 @@ fun OverrideTutorialScreen(
     onGetStartedButtonClick: () -> Unit,
     onSecondButtonClick: () -> Unit
 ) {
-    DSAppTheme(AppTheme.Client) {
-        DSScreen {
-            Column {
-                DSNavBar(logoResId = R.drawable.ic_logo_toolbar)
-                Spacer(modifier = Modifier.height(53.dp))
-                DSImage(imageResId = R.drawable.img_slide01)
-                Spacer(modifier = Modifier.height(24.dp))
-                DSHeader(
-                    title = "Keep Your Family Safe",
-                    body = "Location Monitoring, Tracking, and Parental Controls made easy."
-                )
-                Spacer(modifier = Modifier.weight(1f))
-                DSButton(
-                    text = "Get started",
-                    onClick = onGetStartedButtonClick
-                )
-                DSButton(
-                    text = "Second button",
-                    onClick = onSecondButtonClick
-                )
-            }
+    DSScreen {
+        Column {
+            DSNavBar(logoResId = R.drawable.ic_logo_toolbar)
+            Spacer(modifier = Modifier.height(53.dp))
+            DSImage(imageResId = R.drawable.img_slide01)
+            Spacer(modifier = Modifier.height(24.dp))
+            DSHeader(
+                title = "Keep Your Family Safe",
+                body = "Location Monitoring, Tracking, and Parental Controls made easy."
+            )
+            Spacer(modifier = Modifier.weight(1f))
+            DSButton(
+                text = "Get started",
+                onClick = onGetStartedButtonClick
+            )
+            DSButton(
+                text = "Second button",
+                onClick = onSecondButtonClick
+            )
         }
     }
 }
@@ -49,8 +47,10 @@ fun OverrideTutorialScreen(
 @Preview
 @Composable
 private fun OverrideTutorialScreenPreview() {
-    OverrideTutorialScreen(
-        onGetStartedButtonClick = {},
-        onSecondButtonClick = {}
-    )
+    DSAppTheme(AppTheme.Client) {
+        OverrideTutorialScreen(
+            onGetStartedButtonClick = {},
+            onSecondButtonClick = {}
+        )
+    }
 }
