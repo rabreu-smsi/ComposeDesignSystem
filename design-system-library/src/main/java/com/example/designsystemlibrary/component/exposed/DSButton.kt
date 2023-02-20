@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.designsystemlibrary.theme.DesignSystemTheme
+import com.example.designsystemlibrary.theme.DefaultTheme
 import com.example.designsystemlibrary.theme.DSTheme
 
 @Composable
@@ -47,7 +47,7 @@ fun DSButton(
 @Preview(showBackground = true)
 @Composable
 private fun DSButtonPreview() {
-    DesignSystemTheme {
+    DefaultTheme {
         DSButton(
             text = "Button",
             onClick = {}

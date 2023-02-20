@@ -13,8 +13,8 @@ import com.example.designsystemlibrary.component.exposed.DSHeader
 import com.example.designsystemlibrary.component.exposed.DSImage
 import com.example.designsystemlibrary.component.exposed.DSScreen
 import com.example.designsystemlibrary.component.exposed.navbar.DSNavBar
+import com.example.designsystemlibrary.theme.DefaultTheme
 import com.example.productcore.R
-import com.example.productcore.ui.SafePathTheme
 
 @Composable
 fun TutorialScreen(
@@ -43,7 +43,7 @@ fun TutorialScreen(
 @Preview
 @Composable
 private fun TutorialScreenPreview() {
-    SafePathTheme {
+    DefaultTheme {
         TutorialScreen(
             onGetStartedButtonClick = {}
         )

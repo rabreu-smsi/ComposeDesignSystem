@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import com.example.designsystemlibrary.R
 import com.example.designsystemlibrary.component.internal.icon.Icon
 import com.example.designsystemlibrary.theme.DSTheme
-import com.example.designsystemlibrary.theme.DesignSystemTheme
+import com.example.designsystemlibrary.theme.DefaultTheme
 
 @Composable
 fun DSParagraph(
@@ -50,7 +50,7 @@ fun DSParagraph(
 @Preview(showBackground = true)
 @Composable
 private fun ListItemPreview() {
-    DesignSystemTheme {
+    DefaultTheme {
         DSParagraph(
             imageResId = R.drawable.ic_pin,
             text = "Keep track of your family members' current location."

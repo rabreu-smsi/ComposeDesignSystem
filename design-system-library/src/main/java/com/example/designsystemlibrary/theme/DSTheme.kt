@@ -27,7 +27,7 @@ object DSTheme {
 }
 
 @Composable
-internal fun DesignSystemTheme(content: @Composable () -> Unit) {
+fun DefaultTheme(content: @Composable () -> Unit) {
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {

@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 import com.example.designsystemlibrary.R
 import com.example.designsystemlibrary.component.internal.icon.IconFillHeight
 import com.example.designsystemlibrary.theme.DSTheme
-import com.example.designsystemlibrary.theme.DesignSystemTheme
+import com.example.designsystemlibrary.theme.DefaultTheme
 
 @Composable
 private fun BaseNavBar(
@@ -77,7 +77,7 @@ fun DSNavBar(
 @Preview(showBackground = true)
 @Composable
 private fun DSNavBarPreview() {
-    DesignSystemTheme {
+    DefaultTheme {
         DSNavBar(logoResId = R.drawable.ic_logo_toolbar)
     }
 }
@@ -85,7 +85,7 @@ private fun DSNavBarPreview() {
 @Preview(showBackground = true)
 @Composable
 private fun DSNavBarPreview_title() {
-    DesignSystemTheme {
+    DefaultTheme {
         DSNavBar(
             title = "Nav Bar Title",
             onBackPressed = {},

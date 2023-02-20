@@ -10,8 +10,8 @@ import com.example.designsystemlibrary.component.exposed.DSHeader
 import com.example.designsystemlibrary.component.exposed.DSImage
 import com.example.designsystemlibrary.component.exposed.DSParagraph
 import com.example.designsystemlibrary.component.exposed.DSScreen
+import com.example.designsystemlibrary.theme.DefaultTheme
 import com.example.productcore.R
-import com.example.productcore.ui.SafePathTheme
 
 @Composable
 fun WelcomeScreen(
@@ -42,13 +42,12 @@ fun WelcomeScreen(
             )
         }
     }
-
 }
 
 @Preview
 @Composable
 private fun WelcomeScreenPreview() {
-    SafePathTheme {
+    DefaultTheme {
         WelcomeScreen(
             onGetStartedClick = {}
         )
