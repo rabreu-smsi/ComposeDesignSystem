@@ -15,6 +15,7 @@ import com.example.theme.impl.safepath.dsTypographySafePath
 
 var LocalColorScheme: ProvidableCompositionLocal<DSColorScheme>? = null
 var LocalTypography: ProvidableCompositionLocal<DSTypography>? = null
+var Theme: AppTheme = AppTheme.SafePath
 
 object DSTheme {
     val colorScheme: DSColorScheme
@@ -29,33 +30,32 @@ object DSTheme {
 
 @Composable
 fun DSAppTheme(
-    appTheme: AppTheme,
     content: @Composable () -> Unit,
 ) {
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {
             val activity = view.context as Activity
-            activity.window.statusBarColor = getColorScheme(appTheme).onBackgroundLight.toArgb()
+            activity.window.statusBarColor = getColorScheme().onBackgroundLight.toArgb()
         }
     }
 
-    LocalColorScheme = staticCompositionLocalOf { getColorScheme(appTheme) }
-    LocalTypography = staticCompositionLocalOf { getTypography(appTheme) }
+    LocalColorScheme = staticCompositionLocalOf { getColorScheme() }
+    LocalTypography = staticCompositionLocalOf { getTypography() }
 
     CompositionLocalProvider(
-        LocalColorScheme!! provides getColorScheme(appTheme),
-        LocalTypography!! provides getTypography(appTheme),
+        LocalColorScheme!! provides getColorScheme(),
+        LocalTypography!! provides getTypography(),
         content = content
     )
 }
 
-private fun getColorScheme(appTheme: AppTheme) = when (appTheme) {
+private fun getColorScheme() = when (Theme) {
     AppTheme.SafePath -> dsColorSchemeSafePath
     AppTheme.Client -> dsColorSchemeClient
 }
 
-private fun getTypography(appTheme: AppTheme) = when (appTheme) {
+private fun getTypography() = when (Theme) {
     AppTheme.SafePath -> dsTypographySafePath
     AppTheme.Client -> dsTypographySafePath
 }

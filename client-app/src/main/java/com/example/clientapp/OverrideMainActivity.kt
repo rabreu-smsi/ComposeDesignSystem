@@ -16,6 +16,4 @@ class OverrideMainActivity : MainActivity() {
             onSecondButtonClick = {}
         )
     }
-
-    override fun getUITheme() = AppTheme.Client
 }

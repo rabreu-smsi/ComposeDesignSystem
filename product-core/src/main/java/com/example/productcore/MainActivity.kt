@@ -14,12 +14,10 @@ open class MainActivity : ComponentActivity() {
     open fun Screen(onGetStartedButtonClick: () -> Unit) =
         TutorialScreen(onGetStartedButtonClick = onGetStartedButtonClick)
 
-    open fun getUITheme() = AppTheme.SafePath
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            DSAppTheme(getUITheme()) {
+            DSAppTheme {
                 Screen(onGetStartedButtonClick = {})
             }
         }

@@ -15,6 +15,7 @@ import com.example.designsystemlibrary.DSScreen
 import com.example.productcore.R
 import com.example.theme.api.AppTheme
 import com.example.theme.api.DSAppTheme
+import com.example.theme.api.Theme
 
 @Composable
 fun OverrideTutorialScreen(
@@ -47,7 +48,8 @@ fun OverrideTutorialScreen(
 @Preview
 @Composable
 private fun OverrideTutorialScreenPreview() {
-    DSAppTheme(AppTheme.Client) {
+    Theme = AppTheme.Client
+    DSAppTheme {
         OverrideTutorialScreen(
             onGetStartedButtonClick = {},
             onSecondButtonClick = {}

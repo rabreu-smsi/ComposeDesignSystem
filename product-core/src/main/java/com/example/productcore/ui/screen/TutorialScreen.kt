@@ -42,7 +42,7 @@ fun TutorialScreen(
 @Preview
 @Composable
 private fun TutorialScreenPreview() {
-    DSAppTheme(AppTheme.SafePath) {
+    DSAppTheme {
         TutorialScreen(
             onGetStartedButtonClick = {}
         )
