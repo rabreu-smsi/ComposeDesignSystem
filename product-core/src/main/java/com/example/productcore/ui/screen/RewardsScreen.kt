@@ -13,12 +13,12 @@ import com.example.designsystemlibrary.component.exposed.DSImage
 import com.example.designsystemlibrary.component.exposed.DSScreen
 import com.example.designsystemlibrary.component.exposed.navbar.DSNavBar
 import com.example.designsystemlibrary.component.exposed.navbar.NavBarAction
-import com.example.designsystemlibrary.theme.DefaultTheme
+import com.example.designsystemlibrary.theme.AppTheme
 import com.example.productcore.R
 
 @Composable
 fun RewardsScreen(
-    onButtonClick: () -> Unit
+    onGetStartedClick: () -> Unit
 ) {
     DSScreen {
         Column {
@@ -43,7 +43,7 @@ fun RewardsScreen(
             Spacer(modifier = Modifier.weight(1f))
             DSButton(
                 text = "Click here",
-                onClick = onButtonClick
+                onClick = onGetStartedClick
             )
         }
     }
@@ -52,7 +52,7 @@ fun RewardsScreen(
 @Preview
 @Composable
 private fun RewardsScreenPreview() {
-    DefaultTheme {
-        RewardsScreen(onButtonClick = {})
+    AppTheme {
+        RewardsScreen(onGetStartedClick = {})
     }
 }

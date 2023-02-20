@@ -6,7 +6,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.designsystemlibrary.theme.DefaultTheme
+import com.example.designsystemlibrary.theme.AppTheme
 import com.example.designsystemlibrary.theme.DSTheme
 
 @Composable
@@ -25,7 +25,7 @@ fun DSScreen(
 @Preview
 @Composable
 private fun DSScreenPreview() {
-    DefaultTheme {
+    AppTheme {
         DSScreen {}
     }
 }

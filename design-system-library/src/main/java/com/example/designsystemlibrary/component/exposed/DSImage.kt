@@ -8,7 +8,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.designsystemlibrary.R
-import com.example.designsystemlibrary.theme.DefaultTheme
+import com.example.designsystemlibrary.theme.AppTheme
 
 @Composable
 fun DSImage(
@@ -27,7 +27,7 @@ fun DSImage(
 @Preview
 @Composable
 private fun DSImagePreview() {
-    DefaultTheme {
+    AppTheme {
         DSImage(
             imageResId = R.drawable.img_slide01
         )

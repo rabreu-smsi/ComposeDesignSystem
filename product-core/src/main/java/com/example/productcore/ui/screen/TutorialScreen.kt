@@ -13,12 +13,12 @@ import com.example.designsystemlibrary.component.exposed.DSHeader
 import com.example.designsystemlibrary.component.exposed.DSImage
 import com.example.designsystemlibrary.component.exposed.DSScreen
 import com.example.designsystemlibrary.component.exposed.navbar.DSNavBar
-import com.example.designsystemlibrary.theme.DefaultTheme
+import com.example.designsystemlibrary.theme.AppTheme
 import com.example.productcore.R
 
 @Composable
 fun TutorialScreen(
-    onGetStartedButtonClick: () -> Unit
+    onGetStartedClick: () -> Unit
 ) {
     DSScreen {
         Column {
@@ -34,7 +34,7 @@ fun TutorialScreen(
             Spacer(modifier = Modifier.weight(1f))
             DSButton(
                 text = "Get started",
-                onClick = onGetStartedButtonClick
+                onClick = onGetStartedClick
             )
         }
     }
@@ -43,9 +43,9 @@ fun TutorialScreen(
 @Preview
 @Composable
 private fun TutorialScreenPreview() {
-    DefaultTheme {
+    AppTheme {
         TutorialScreen(
-            onGetStartedButtonClick = {}
+            onGetStartedClick = {}
         )
     }
 }

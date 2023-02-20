@@ -1,21 +1,22 @@
-package com.example.productcore.ui.screen
+package com.example.clientapp.ui.screen
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.clientapp.ui.ClientTheme
 import com.example.designsystemlibrary.component.exposed.DSButton
 import com.example.designsystemlibrary.component.exposed.DSHeader
 import com.example.designsystemlibrary.component.exposed.DSImage
 import com.example.designsystemlibrary.component.exposed.DSParagraph
 import com.example.designsystemlibrary.component.exposed.DSScreen
-import com.example.designsystemlibrary.theme.AppTheme
 import com.example.productcore.R
 
 @Composable
-fun WelcomeScreen(
-    onGetStartedClick: () -> Unit
+fun OverrideWelcomeScreen(
+    onGetStartedClick: () -> Unit,
+    onCancelClick: () -> Unit
 ) {
     DSScreen {
         Column {
@@ -40,6 +41,10 @@ fun WelcomeScreen(
                 text = "Get started",
                 onClick = onGetStartedClick
             )
+            DSButton(
+                text = "Cancel",
+                onClick = onCancelClick
+            )
         }
     }
 }
@@ -47,9 +52,10 @@ fun WelcomeScreen(
 @Preview
 @Composable
 private fun WelcomeScreenPreview() {
-    AppTheme {
-        WelcomeScreen(
-            onGetStartedClick = {}
+    ClientTheme {
+        OverrideWelcomeScreen(
+            onGetStartedClick = {},
+            onCancelClick = {}
         )
     }
 }

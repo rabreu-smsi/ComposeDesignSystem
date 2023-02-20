@@ -12,8 +12,8 @@ import androidx.compose.ui.platform.LocalView
 var LocalColorScheme: ProvidableCompositionLocal<DSColorScheme>? = null
 var LocalTypography: ProvidableCompositionLocal<DSTypography>? = null
 
-private val colorScheme = DSColorScheme()
-private val typography = DSTypography()
+var dsColorScheme = DSColorScheme()
+var dsTypography = DSTypography()
 
 object DSTheme {
     val colorScheme: DSColorScheme
@@ -27,21 +27,21 @@ object DSTheme {
 }
 
 @Composable
-fun DefaultTheme(content: @Composable () -> Unit) {
+fun AppTheme(content: @Composable () -> Unit) {
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {
             val activity = view.context as Activity
-            activity.window.statusBarColor = colorScheme.onBackgroundLight.toArgb()
+            activity.window.statusBarColor = dsColorScheme.onBackgroundLight.toArgb()
         }
     }
 
-    LocalColorScheme = staticCompositionLocalOf { colorScheme }
-    LocalTypography = staticCompositionLocalOf { typography }
+    LocalColorScheme = staticCompositionLocalOf { dsColorScheme }
+    LocalTypography = staticCompositionLocalOf { dsTypography }
 
     CompositionLocalProvider(
-        LocalColorScheme!! provides colorScheme,
-        LocalTypography!! provides typography,
+        LocalColorScheme!! provides dsColorScheme,
+        LocalTypography!! provides dsTypography,
         content = content
     )
 }

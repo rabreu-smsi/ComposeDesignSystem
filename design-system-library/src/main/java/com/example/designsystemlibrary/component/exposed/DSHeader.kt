@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.designsystemlibrary.theme.DefaultTheme
+import com.example.designsystemlibrary.theme.AppTheme
 import com.example.designsystemlibrary.theme.DSTheme
 
 @Composable
@@ -29,6 +29,7 @@ fun DSHeader(
         Text(
             modifier = Modifier.fillMaxWidth(),
             text = title,
+            color = DSTheme.colorScheme.onBackground,
             style = DSTheme.typography.h2,
             textAlign = textAlign
         )
@@ -38,6 +39,7 @@ fun DSHeader(
             Text(
                 modifier = Modifier.fillMaxWidth(),
                 text = body,
+                color = DSTheme.colorScheme.onBackground,
                 style = DSTheme.typography.body2,
                 textAlign = textAlign
             )
@@ -48,7 +50,7 @@ fun DSHeader(
 @Preview(showBackground = true)
 @Composable
 private fun DSHeaderPreview() {
-    DefaultTheme {
+    AppTheme {
         DSHeader(title = "Header title")
     }
 }
@@ -56,7 +58,7 @@ private fun DSHeaderPreview() {
 @Preview(showBackground = true)
 @Composable
 private fun DSHeaderPreview_withBody() {
-    DefaultTheme {
+    AppTheme {
         DSHeader(
             title = "Header title",
             body = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\n" +

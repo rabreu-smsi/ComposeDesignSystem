@@ -15,7 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.designsystemlibrary.R
-import com.example.designsystemlibrary.theme.DefaultTheme
+import com.example.designsystemlibrary.theme.AppTheme
 
 @Composable
 private fun BaseIcon(
@@ -85,7 +85,7 @@ internal fun IconFillWidth(
 @Preview
 @Composable
 private fun IconPreview() {
-    DefaultTheme {
+    AppTheme {
         Icon(
             imageResId = R.drawable.ic_pin,
             size = 48.dp

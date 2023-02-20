@@ -9,7 +9,7 @@
     android:supportsRtl="true"
     android:theme="@style/Theme.ComposeDesignSystem">
     <activity
-      android:name="com.example.productcore.MainActivity"
+      android:name=".MainActivity"
       android:exported="true"
       android:label="@string/app_name"
       android:theme="@style/Theme.ComposeDesignSystem">
@@ -19,6 +19,9 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
+    <activity android:name="com.example.productcore.activity.WelcomeActivity"/>
+    <activity android:name="com.example.productcore.activity.RewardsActivity"/>
+    <activity android:name="com.example.productcore.activity.TutorialActivity"/>
   </application>
 
 </manifest>
