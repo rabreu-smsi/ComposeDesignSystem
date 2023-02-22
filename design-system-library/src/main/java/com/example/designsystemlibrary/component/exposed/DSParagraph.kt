@@ -37,7 +37,7 @@ fun DSParagraph(
             modifier = Modifier
                 .fillMaxWidth()
                 .heightIn(min = 76.dp)
-                .padding(top = 16.dp, bottom = 36.dp)
+                .padding(vertical = 14.dp)
         ) {
             Text(
                 text = text,
