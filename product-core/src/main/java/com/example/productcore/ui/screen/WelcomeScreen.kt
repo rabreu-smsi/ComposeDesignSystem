@@ -48,8 +48,6 @@ fun WelcomeScreen(
 @Composable
 private fun WelcomeScreenPreview() {
     AppTheme {
-        WelcomeScreen(
-            onGetStartedClick = {}
-        )
+        WelcomeScreen(onGetStartedClick = {})
     }
 }

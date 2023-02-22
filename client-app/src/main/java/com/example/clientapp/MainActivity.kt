@@ -11,7 +11,7 @@ import com.example.productcore.activity.WelcomeActivity
 class MainActivity: ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        startActivity(Intent(this, RewardsActivity::class.java))
+        startActivity(Intent(this, WelcomeActivity::class.java))
         finish()
     }
 }
